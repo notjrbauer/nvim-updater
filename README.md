@@ -1,6 +1,6 @@
 # nvim-updater
 
-> Install `nightly` nvim with the cli.
+> Install `nightly` `macOS` (linux soon) nvim with the cli.
 
 ## Installation
 
