@@ -1,6 +1,6 @@
 # nvim-updater
 
-> Install `nightly` `macOS` (linux soon) nvim with the cli.
+> Install `nightly` nvim with the cli.
 
 ## Installation
 
@@ -9,6 +9,12 @@ go get github.com/notjrbauer/nvim-updater
 ```
 
 ## Usage
+
+### `--flavor`
+
+#### Flavor of distro to fetch.
+
+#### Defaults: `macos`
 
 ### `--source`
 

@@ -18,6 +18,7 @@ func main() {
 	source := ""
 	destination := ""
 	release := ""
+	flavor := ""
 
 	cwd, err := os.Getwd()
 	to := "/usr/local"
@@ -28,14 +29,15 @@ func main() {
 	flag.StringVar(&source, "source", cwd, "the source directory of nvim.")
 	flag.StringVar(&destination, "destination", to, "the source directory of nvim.")
 	flag.StringVar(&release, "release", "nightly", "the nightly or stable release.")
+	flag.StringVar(&flavor, "flavor", "macos", "the flavor to install (unix64, macos)")
 
 	flag.Parse()
 	baseSource := source
-	source = path.Join(source, "nvim-macos/bin/nvim")
+	source = path.Join(source, fmt.Sprintf("nvim-%s/bin/nvim", flavor))
 	destination = path.Join(destination, "bin/nvim")
 
-	template := "/neovim/neovim/releases/download/%s/nvim-macos.tar.gz"
-	release = fmt.Sprintf(template, release)
+	template := "/neovim/neovim/releases/download/%s/nvim-%s.tar.gz"
+	release = fmt.Sprintf(template, release, flavor)
 
 	fmt.Printf("baseSource: %s, destination: %s, release: %s\n", baseSource, destination, release)
 
