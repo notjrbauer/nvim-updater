@@ -1,5 +1,7 @@
 # nvim-updater
 
+> Install `nightly` nvim with the cli.
+
 ## Installation
 
 ```
