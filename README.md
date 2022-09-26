@@ -30,7 +30,3 @@ To quickly set up:
 # Install to `$HOME` and symlink to `/usr/local/bin`
 cd $HOME && nvim-updater
 ```
-
-```
-
-```
